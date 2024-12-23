@@ -345,10 +345,12 @@ public class StickerView extends FrameLayout {
 
     if (handlingSticker != null) {
       downMatrix.set(handlingSticker.getMatrix());
-      if (bringToFrontCurrentSticker) {
-        stickers.remove(handlingSticker);
-        stickers.add(handlingSticker);
-      }
+//      if (bringToFrontCurrentSticker) {
+//        stickers.remove(handlingSticker);
+//        stickers.add(handlingSticker);
+//      }
+      stickers.remove(handlingSticker);
+      stickers.add(handlingSticker);
       if (onStickerOperationListener != null){
         onStickerOperationListener.onStickerTouchedDown(handlingSticker);
       }
